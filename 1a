@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+class Number {
+public:
+    int value;
+    Number(int v){
+         value = v; 
+    }
+};
+
+Number increment(Number n) {
+    n.value = n.value + 1;
+    return n;
+}
+
+int main() {
+    Number num1(10);
+    Number num2 = increment(num1);
+
+    cout << "Original value: " << num1.value << endl;
+    cout << "Incremented value: " << num2.value << endl;
+    return 0;
+}

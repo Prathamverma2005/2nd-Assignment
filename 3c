@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+class Counter {
+public:
+    static int total;
+};
+
+int Counter::total = 5; 
+
+int main() {
+    cout << "Counter total: " << Counter::total << endl;
+    Counter::total = 10;
+    cout << "Updated total: " << Counter::total << endl;
+    return 0;
+}

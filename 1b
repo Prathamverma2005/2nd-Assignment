@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+class Number {
+public:
+    int value;
+    Number(int v) { value = v; }
+};
+
+
+Number* doubleValue(Number* n) {
+    n->value = n->value * 2;
+    return n;
+}
+
+int main() {
+    Number num1(10);
+    Number* num2 = doubleValue(&num1);
+
+    cout << "Value after doubling: " << num2->value << endl;
+    return 0;
+}

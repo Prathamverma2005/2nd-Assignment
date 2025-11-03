@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int data = 5; 
+
+class Demo {
+public:
+    static int data; 
+};
+
+int Demo::data = 10; 
+
+int main() {
+    int data = 20; 
+
+    cout << "Local variable: " << data << endl;        
+    cout << "Global variable: " << ::data << endl;     
+    cout << "Static class variable: " << Demo::data << endl;  
+
+    return 0;
+}

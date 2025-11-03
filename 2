@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+public:
+    int length;
+    int width;
+
+    void getDimensions() {
+        cout << "Enter length: ";
+        cin >> length;
+        cout << "Enter width: ";
+        cin >> width;
+    }
+
+    int area() {
+        return length * width;
+    }
+};
+
+int main() {
+    int n;
+    cout << "How many rectangles? ";
+    cin >> n;
+
+    Rectangle rects[100]; 
+    for (int i = 0; i < n; i++) {
+        cout << "\nRectangle " << (i + 1) << ":\n";
+        rects[i].getDimensions();
+    }
+
+    cout << "\nAreas of rectangles:\n";
+    for (int i = 0; i < n; i++) {
+        cout << "Rectangle " << (i + 1) << ": " << rects[i].area() << endl;
+    }
+
+    return 0;
+}
